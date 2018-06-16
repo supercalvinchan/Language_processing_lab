@@ -1,6 +1,13 @@
 Lab exercises for Language Processors 2017/2018
 ===============================================
 
+_This is the Lab I have done for the Language processing course.
+_The lab consists of three parts, which are helping us for the compiler coursework.
+
+_Requirements has shwon below.
+
+===============================================
+
 This repository contains the specification for
 the three lab exercises for Language Processors.
 The three exercises are equally weighted, and
