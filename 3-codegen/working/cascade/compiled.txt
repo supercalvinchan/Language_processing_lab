@@ -1,0 +1,34 @@
+const x 0
+const y 1
+const _zero_4 0
+add _secRegA_2 x _zero_4
+const _secRegB_3 1
+add _cond_1 _secRegA_2 _secRegB_3
+const _zero_5 0
+beq _cond_1 _zero_5 _fail_6
+const _zero_9 0
+add _cond_8 y _zero_9
+const _zero_10 0
+beq _cond_8 _zero_10 _fail_11
+const zero 0
+const one 1
+:top
+const _zero_13 0
+add srcRegA x _zero_13
+beq srcRegA zero bottom
+const x 1
+beq one one top
+:bottom
+const destReg 0
+const x 2
+bne _cond_8 _zero_10 _pass_12
+:_fail_11
+const _res_0 4
+:_pass_12
+bne _cond_1 _zero_5 _pass_7
+:_fail_6
+const x 3
+:_pass_7
+const _zero_14 0
+add _res_0 x _zero_14
+halt _res_0

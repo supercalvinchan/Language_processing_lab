@@ -1,0 +1,104 @@
+Src: const a 0
+Src: input i
+Src: const zero 0
+Src: const one 1
+Src: :top
+Src: const _zero_1 0
+Src: add srcRegA i _zero_1
+Src: beq srcRegA zero bottom
+Src: const _zero_4 0
+Src: add _secRegA_2 a _zero_4
+Src: const _zero_5 0
+Src: add _secRegB_3 i _zero_5
+Src: add a _secRegA_2 _secRegB_3
+Src: input i
+Src: beq one one top
+Src: :bottom
+Src: const destReg 0
+Src: const _zero_6 0
+Src: add _res_0 a _zero_6
+Src: halt _res_0
+Exec 0:const a 0, {}
+Exec 1:input i, { a:0}
+Exec 2:const zero 0, { a:0 i:4}
+Exec 3:const one 1, { a:0 i:4 zero:0}
+Exec 4:const _zero_1 0, { a:0 i:4 one:1 zero:0}
+Exec 5:add srcRegA i _zero_1, { _zero_1:0 a:0 i:4 one:1 zero:0}
+getReg(i)
+getReg(_zero_1)
+Exec 6:, { _zero_1:0 a:0 i:4 one:1 srcRegA:4 zero:0}
+getReg(srcRegA)
+getReg(zero)
+Exec 7:const _zero_4 0, { _zero_1:0 a:0 i:4 one:1 srcRegA:4 zero:0}
+Exec 8:add _secRegA_2 a _zero_4, { _zero_1:0 _zero_4:0 a:0 i:4 one:1 srcRegA:4 zero:0}
+getReg(a)
+getReg(_zero_4)
+Exec 9:const _zero_5 0, { _secRegA_2:0 _zero_1:0 _zero_4:0 a:0 i:4 one:1 srcRegA:4 zero:0}
+Exec 10:add _secRegB_3 i _zero_5, { _secRegA_2:0 _zero_1:0 _zero_4:0 _zero_5:0 a:0 i:4 one:1 srcRegA:4 zero:0}
+getReg(i)
+getReg(_zero_5)
+Exec 11:add a _secRegA_2 _secRegB_3, { _secRegA_2:0 _secRegB_3:4 _zero_1:0 _zero_4:0 _zero_5:0 a:0 i:4 one:1 srcRegA:4 zero:0}
+getReg(_secRegA_2)
+getReg(_secRegB_3)
+Exec 12:input i, { _secRegA_2:0 _secRegB_3:4 _zero_1:0 _zero_4:0 _zero_5:0 a:4 i:4 one:1 srcRegA:4 zero:0}
+Exec 13:, { _secRegA_2:0 _secRegB_3:4 _zero_1:0 _zero_4:0 _zero_5:0 a:4 i:5 one:1 srcRegA:4 zero:0}
+getReg(one)
+getReg(one)
+Exec 4:const _zero_1 0, { _secRegA_2:0 _secRegB_3:4 _zero_1:0 _zero_4:0 _zero_5:0 a:4 i:5 one:1 srcRegA:4 zero:0}
+Exec 5:add srcRegA i _zero_1, { _secRegA_2:0 _secRegB_3:4 _zero_1:0 _zero_4:0 _zero_5:0 a:4 i:5 one:1 srcRegA:4 zero:0}
+getReg(i)
+getReg(_zero_1)
+Exec 6:, { _secRegA_2:0 _secRegB_3:4 _zero_1:0 _zero_4:0 _zero_5:0 a:4 i:5 one:1 srcRegA:5 zero:0}
+getReg(srcRegA)
+getReg(zero)
+Exec 7:const _zero_4 0, { _secRegA_2:0 _secRegB_3:4 _zero_1:0 _zero_4:0 _zero_5:0 a:4 i:5 one:1 srcRegA:5 zero:0}
+Exec 8:add _secRegA_2 a _zero_4, { _secRegA_2:0 _secRegB_3:4 _zero_1:0 _zero_4:0 _zero_5:0 a:4 i:5 one:1 srcRegA:5 zero:0}
+getReg(a)
+getReg(_zero_4)
+Exec 9:const _zero_5 0, { _secRegA_2:4 _secRegB_3:4 _zero_1:0 _zero_4:0 _zero_5:0 a:4 i:5 one:1 srcRegA:5 zero:0}
+Exec 10:add _secRegB_3 i _zero_5, { _secRegA_2:4 _secRegB_3:4 _zero_1:0 _zero_4:0 _zero_5:0 a:4 i:5 one:1 srcRegA:5 zero:0}
+getReg(i)
+getReg(_zero_5)
+Exec 11:add a _secRegA_2 _secRegB_3, { _secRegA_2:4 _secRegB_3:5 _zero_1:0 _zero_4:0 _zero_5:0 a:4 i:5 one:1 srcRegA:5 zero:0}
+getReg(_secRegA_2)
+getReg(_secRegB_3)
+Exec 12:input i, { _secRegA_2:4 _secRegB_3:5 _zero_1:0 _zero_4:0 _zero_5:0 a:9 i:5 one:1 srcRegA:5 zero:0}
+Exec 13:, { _secRegA_2:4 _secRegB_3:5 _zero_1:0 _zero_4:0 _zero_5:0 a:9 i:6 one:1 srcRegA:5 zero:0}
+getReg(one)
+getReg(one)
+Exec 4:const _zero_1 0, { _secRegA_2:4 _secRegB_3:5 _zero_1:0 _zero_4:0 _zero_5:0 a:9 i:6 one:1 srcRegA:5 zero:0}
+Exec 5:add srcRegA i _zero_1, { _secRegA_2:4 _secRegB_3:5 _zero_1:0 _zero_4:0 _zero_5:0 a:9 i:6 one:1 srcRegA:5 zero:0}
+getReg(i)
+getReg(_zero_1)
+Exec 6:, { _secRegA_2:4 _secRegB_3:5 _zero_1:0 _zero_4:0 _zero_5:0 a:9 i:6 one:1 srcRegA:6 zero:0}
+getReg(srcRegA)
+getReg(zero)
+Exec 7:const _zero_4 0, { _secRegA_2:4 _secRegB_3:5 _zero_1:0 _zero_4:0 _zero_5:0 a:9 i:6 one:1 srcRegA:6 zero:0}
+Exec 8:add _secRegA_2 a _zero_4, { _secRegA_2:4 _secRegB_3:5 _zero_1:0 _zero_4:0 _zero_5:0 a:9 i:6 one:1 srcRegA:6 zero:0}
+getReg(a)
+getReg(_zero_4)
+Exec 9:const _zero_5 0, { _secRegA_2:9 _secRegB_3:5 _zero_1:0 _zero_4:0 _zero_5:0 a:9 i:6 one:1 srcRegA:6 zero:0}
+Exec 10:add _secRegB_3 i _zero_5, { _secRegA_2:9 _secRegB_3:5 _zero_1:0 _zero_4:0 _zero_5:0 a:9 i:6 one:1 srcRegA:6 zero:0}
+getReg(i)
+getReg(_zero_5)
+Exec 11:add a _secRegA_2 _secRegB_3, { _secRegA_2:9 _secRegB_3:6 _zero_1:0 _zero_4:0 _zero_5:0 a:9 i:6 one:1 srcRegA:6 zero:0}
+getReg(_secRegA_2)
+getReg(_secRegB_3)
+Exec 12:input i, { _secRegA_2:9 _secRegB_3:6 _zero_1:0 _zero_4:0 _zero_5:0 a:15 i:6 one:1 srcRegA:6 zero:0}
+Exec 13:, { _secRegA_2:9 _secRegB_3:6 _zero_1:0 _zero_4:0 _zero_5:0 a:15 i:0 one:1 srcRegA:6 zero:0}
+getReg(one)
+getReg(one)
+Exec 4:const _zero_1 0, { _secRegA_2:9 _secRegB_3:6 _zero_1:0 _zero_4:0 _zero_5:0 a:15 i:0 one:1 srcRegA:6 zero:0}
+Exec 5:add srcRegA i _zero_1, { _secRegA_2:9 _secRegB_3:6 _zero_1:0 _zero_4:0 _zero_5:0 a:15 i:0 one:1 srcRegA:6 zero:0}
+getReg(i)
+getReg(_zero_1)
+Exec 6:, { _secRegA_2:9 _secRegB_3:6 _zero_1:0 _zero_4:0 _zero_5:0 a:15 i:0 one:1 srcRegA:0 zero:0}
+getReg(srcRegA)
+getReg(zero)
+Exec 14:const destReg 0, { _secRegA_2:9 _secRegB_3:6 _zero_1:0 _zero_4:0 _zero_5:0 a:15 i:0 one:1 srcRegA:0 zero:0}
+Exec 15:const _zero_6 0, { _secRegA_2:9 _secRegB_3:6 _zero_1:0 _zero_4:0 _zero_5:0 a:15 destReg:0 i:0 one:1 srcRegA:0 zero:0}
+Exec 16:add _res_0 a _zero_6, { _secRegA_2:9 _secRegB_3:6 _zero_1:0 _zero_4:0 _zero_5:0 _zero_6:0 a:15 destReg:0 i:0 one:1 srcRegA:0 zero:0}
+getReg(a)
+getReg(_zero_6)
+Exec 17:, { _res_0:15 _secRegA_2:9 _secRegB_3:6 _zero_1:0 _zero_4:0 _zero_5:0 _zero_6:0 a:15 destReg:0 i:0 one:1 srcRegA:0 zero:0}
+getReg(_res_0)

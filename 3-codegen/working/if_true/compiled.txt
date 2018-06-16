@@ -1,0 +1,9 @@
+param _cond_1 0
+const _zero_2 0
+beq _cond_1 _zero_2 _fail_3
+param _res_0 1
+bne _cond_1 _zero_2 _pass_4
+:_fail_3
+param _res_0 2
+:_pass_4
+halt _res_0
